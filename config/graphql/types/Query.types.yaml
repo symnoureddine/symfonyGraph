@@ -1,0 +1,13 @@
+Query:
+  type: "object"
+  config:
+    description:  "Main Query"
+    fields:
+      products:
+        type: "Product"
+        args:
+            id: 
+              description: "Get product by ID"
+              type: "Int"
+        resolve: "@=resolver('Product', [args])"
+        
